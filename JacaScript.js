@@ -219,5 +219,7 @@
         let show = function () {
               console.log('Anonymous function');
           };
+        ----
         let show = () => console.log('Anonymous function');
+        ----
         let add = (a, b) => a + b;   
