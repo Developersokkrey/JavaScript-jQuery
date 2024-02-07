@@ -215,3 +215,9 @@
       (function () {
           console.log(person.firstName + ' ' + person.lastName);
       })(person);
+    //-- #2
+        let show = function () {
+              console.log('Anonymous function');
+          };
+        let show = () => console.log('Anonymous function');
+        let add = (a, b) => a + b;   
