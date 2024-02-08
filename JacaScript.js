@@ -262,3 +262,20 @@
 //-- #6 Check if a value is an array
         console.log(Array.isArray(seas)); // true
 
+//-------------------------------------- JavaScript Array map: Transforming Elements
+
+//-- #1 JavaScript Array type provides the map() method
+    let circles = [
+        10, 30, 50
+    ];
+    function circleArea(radius) {
+        return Math.floor(Math.PI * radius * radius);
+    }
+    let areas = circles.map(circleArea);
+    console.log(areas);
+    // * Output
+         // [314, 2827, 7853]
+
+//-- #2 JavaScript Array type provides the map() method, you can make use of the arrow function in ES6
+    let areas = circles.map(radius => Math.floor(Math.PI * radius * radius));
+    console.log(areas);
