@@ -282,7 +282,7 @@
         
         console.log(oddNumbers);
 
-#arrays
+#Arrays
 //-------------------------------------- Basic operations on arrays
 
 //-- #1 Adding an element to the end of an array
@@ -321,7 +321,53 @@
 //-- #6 Check if a value is an array
         console.log(Array.isArray(seas)); // true
 
+#Arrays
+#filter
+//-------------------------------------- JavaScript array filter() method
+#Arrays
+#filter
+//-- #1 JavaScript Array provides the filter() method
+      let cities = [
+          {name: 'Los Angeles', population: 3792621},
+          {name: 'New York', population: 8175133},
+          {name: 'Chicago', population: 2695598},
+          {name: 'Houston', population: 2099451},
+          {name: 'Philadelphia', population: 1526006}
+      ];
+      let bigCities = cities.filter(function (e) {
+          return e.population > 3000000;
+      });
+      console.log(bigCities);
+       // * Output
+          // [
+          //   { name: 'Los Angeles', population: 3792621 },
+          //   { name: 'New York', population: 8175133 }
+          // ]
+
+#Arrays
+#filter
+#sort() 
+#map()
+//-- #2 JavaScript Array provides the filter() method
+        let cities = [
+            {name: 'Los Angeles', population: 3792621},
+            {name: 'New York', population: 8175133},
+            {name: 'Chicago', population: 2695598},
+            {name: 'Houston', population: 2099451},
+            {name: 'Philadelphia', population: 1526006}
+        ];
+        cities
+            .filter(city => city.population < 3000000)
+            .sort((c1, c2) => c1.population - c2.population)
+            .map(city => console.log(city.name + ':' + city.population));
+         // * Output
+                // Philadelphia:1526006
+                // Houston:2099451
+                // Chicago:2695598
+
+
 #Array
+#Map
 //-------------------------------------- JavaScript Array map: Transforming Elements
 
 //-- #1 JavaScript Array type provides the map() method
