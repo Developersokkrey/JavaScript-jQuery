@@ -282,6 +282,7 @@
         
         console.log(oddNumbers);
 
+#arrays
 //-------------------------------------- Basic operations on arrays
 
 //-- #1 Adding an element to the end of an array
@@ -320,6 +321,7 @@
 //-- #6 Check if a value is an array
         console.log(Array.isArray(seas)); // true
 
+#Array
 //-------------------------------------- JavaScript Array map: Transforming Elements
 
 //-- #1 JavaScript Array type provides the map() method
@@ -337,3 +339,49 @@
 //-- #2 JavaScript Array type provides the map() method, you can make use of the arrow function in ES6
     let areas = circles.map(radius => Math.floor(Math.PI * radius * radius));
     console.log(areas);
+
+#Promises
+#callback
+//-------------------------------------- JavaScript Promises
+//-- #1 JavaScript Promises with callback functions
+      function getUsers(callback) {
+      setTimeout(() => {
+        callback([
+          { username: 'john', email: 'john@test.com' },
+          { username: 'jane', email: 'jane@test.com' },
+        ]);
+      }, 1000);
+    }
+    function findUser(username, callback) {
+      getUsers((users) => {
+        const user = users.find((user) => user.username === username);
+        callback(user);
+      });
+    }
+    findUser('john', console.log);
+    // * Output
+         // { username: 'john', email: 'john@test.com' }
+
+#Promises
+//-- #2 JavaScript Promises 
+      function getUsers() {
+      return new Promise((resolve, reject) => {
+        setTimeout(() => {
+          resolve([
+            { username: 'john', email: 'john@test.com' },
+            { username: 'jane', email: 'jane@test.com' },
+          ]);
+        }, 1000);
+      });
+      }
+      function onFulfilled(users) {
+        console.log(users);
+      }
+      const promise = getUsers();
+      promise.then(onFulfilled);
+      // * Output
+         // [
+         //    { username: 'john', email: 'john@test.com' },
+         //    { username: 'jane', email: 'jane@test.com' }
+         //  ]
+
