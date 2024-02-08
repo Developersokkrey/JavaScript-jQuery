@@ -223,3 +223,42 @@
         let show = () => console.log('Anonymous function');
         ----
         let add = (a, b) => a + b;   
+
+//-------------------------------------- Basic operations on arrays
+
+//-- #1 Adding an element to the end of an array
+      let seas = ['Black Sea', 'Caribbean Sea', 'North Sea', 'Baltic Sea'];
+      seas.push('Red Sea');
+      console.log(seas); 
+       // * Output
+          // [ 'Black Sea', 'Caribbean Sea', 'North Sea', 'Baltic Sea', 'Red Sea' ]
+
+//-- #2 Adding an element to the beginning of an array
+      let seas = ['Black Sea', 'Caribbean Sea', 'North Sea', 'Baltic Sea'];
+      seas.unshift('Red Sea');
+      console.log(seas);
+       // * Output
+         // [ 'Red Sea', 'Black Sea', 'Caribbean Sea', 'North Sea', 'Baltic Sea' ]
+
+//-- #3 Removing an element from the end of an array
+      let seas = ['Black Sea', 'Caribbean Sea', 'North Sea', 'Baltic Sea'];
+      const lastElement = seas.pop();
+      console.log(lastElement); 
+       // * Output
+         // Baltic Sea
+
+//-- #4 Removing an element from the beginning of an array
+      let seas = ['Black Sea', 'Caribbean Sea', 'North Sea', 'Baltic Sea'];
+      const firstElement = seas.shift();
+      console.log(firstElement);
+       // * Output
+         // Baltic Sea
+
+//-- #5 Finding an index of an element in the array
+    let seas = ['Black Sea', 'Caribbean Sea', 'North Sea', 'Baltic Sea'];
+    let index = seas.indexOf('North Sea');
+    console.log(index); // 2
+
+//-- #6 Check if a value is an array
+        console.log(Array.isArray(seas)); // true
+
