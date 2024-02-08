@@ -1,8 +1,10 @@
+#Ternary
 //--------------------------------------- JavaScript Ternary Operator
   let speed = 150;
   let message = speed >= 120 ? 'Too Fast' : speed >= 80 ? 'Fast' : 'OK';
   console.log(message);
-
+****
+#Spread
 //-------------------------------------- JavaScript Object Spread
   //-- #1
       let colors = ['red', 'green', 'blue','df','sdf','weg'];
@@ -97,7 +99,8 @@
           // * Output
           // { length: 100, color: 'blue' }
           // { length: 100, color: 'green' }
-
+****
+#switch_case
 //-------------------------------------- JavaScript switch case
 
           let year = 2024;
@@ -132,7 +135,8 @@
               dayCount = -1; // invalid month
           }
           console.log(dayCount); // 29
-
+****
+#do…while_Loop
 //-------------------------------------- JavaScript do…while Loop
 
     // generate a secret number between 1 and 10
@@ -163,7 +167,8 @@
         alert(`Bravo! you're correct after ${guesses} guess(es).`);
       }
     } while (number != secretNumber);
-
+****
+#Functions
 //-------------------------------------- JavaScript Functions are First-Class Citizens
       function compareBy(propertyName) {
         return function (a, b) {
@@ -195,7 +200,9 @@
       console.log('Products sorted by price:');
       products.sort(compareBy('price'));
       console.table(products);
-
+****
+#Functions
+#Anonymous
 //-------------------------------------- JavaScript Anonymous Functions
     //-- #1
       let _person = {
@@ -223,7 +230,9 @@
         let show = () => console.log('Anonymous function');
         ----
         let add = (a, b) => a + b;   
+****
 #Functions
+#Callbacks
 //-------------------------------------- JavaScript Callbacks  Functions
         //-- #1
         function isOdd(number) {
@@ -281,7 +290,7 @@
         let oddNumbers = filter(numbers, (number) => number % 2 != 0);
         
         console.log(oddNumbers);
-
+****
 #Arrays
 //-------------------------------------- Basic operations on arrays
 
@@ -320,12 +329,10 @@
 
 //-- #6 Check if a value is an array
         console.log(Array.isArray(seas)); // true
-
+****
 #Arrays
 #filter
 //-------------------------------------- JavaScript array filter() method
-#Arrays
-#filter
 //-- #1 JavaScript Array provides the filter() method
       let cities = [
           {name: 'Los Angeles', population: 3792621},
@@ -365,7 +372,7 @@
                 // Houston:2099451
                 // Chicago:2695598
 
-
+****
 #Array
 #Map
 //-------------------------------------- JavaScript Array map: Transforming Elements
@@ -386,6 +393,7 @@
     let areas = circles.map(radius => Math.floor(Math.PI * radius * radius));
     console.log(areas);
 
+****
 #Promises
 #callback
 //-------------------------------------- JavaScript Promises
