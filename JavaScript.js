@@ -384,4 +384,65 @@
          //    { username: 'john', email: 'john@test.com' },
          //    { username: 'jane', email: 'jane@test.com' }
          //  ]
+#Promises
+//-- #3 JavaScript Promises 
+      let success = true;
+      function getUsers() {
+        return new Promise((resolve, reject) => {
+          setTimeout(() => {
+            if (success) {
+              resolve([
+                { username: 'john', email: 'john@test.com' },
+                { username: 'jane', email: 'jane@test.com' },
+              ]);
+            } else {
+              reject('Failed to the user list');
+            }
+          }, 1000);
+        });
+      }
+      const promise = getUsers();
+      //success = true;
+      promise.then((users) => {
+        console.log(users);
+      });
+      // * Output
+         // [
+         //    { username: 'john', email: 'john@test.com' },
+         //    { username: 'jane', email: 'jane@test.com' }
+         //  ]
+      //success = false;
+      promise.catch((error) => {
+        console.log(error);
+      });
 
+#Promises
+//-- #4 JavaScript Promises 
+      let success = true;
+      function getUsers() {
+        return new Promise((resolve, reject) => {
+          setTimeout(() => {
+            if (success) {
+              resolve([
+                { username: 'john', email: 'john@test.com' },
+                { username: 'jane', email: 'jane@test.com' },
+              ]);
+            } else {
+              reject('Failed to the user list');
+            }
+          }, 1000);
+        });
+      }
+      function onFulfilled(users) {
+        console.log(users);
+      }
+      function onRejected(error) {
+        console.log(error);
+      }
+      const promise = getUsers();
+      promise.then(onFulfilled, onRejected);
+      // * Output
+         // [
+         //    { username: 'john', email: 'john@test.com' },
+         //    { username: 'jane', email: 'jane@test.com' }
+         //  ]
