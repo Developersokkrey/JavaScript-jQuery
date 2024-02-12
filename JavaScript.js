@@ -500,3 +500,58 @@
          //    { username: 'john', email: 'john@test.com' },
          //    { username: 'jane', email: 'jane@test.com' }
          //  ]
+
+#Reduce 
+#Array
+//-------------------------------------- JavaScript Array reduce & reduceRight
+//-- #1 JavaScript Reducing an Array
+    
+    let shoppingCart = [
+      {
+        product: 'phone',
+        qty: 1,
+        price: 500,
+      },
+      {
+        product: 'Screen Protector',
+        qty: 1,
+        price: 10,
+      },
+      {
+        product: 'Memory Card',
+        qty: 2,
+        price: 20,
+      },
+    ];
+    let total = shoppingCart.reduce(function (previousValue, currentValue) {
+      return previousValue + currentValue.qty * currentValue.price;
+    }, 0);
+    console.log(total);
+    // * Output
+             // 550
+
+#Some
+#Array
+//-------------------------------------- JavaScript Array reduce & reduceRight
+//-- #1 JavaScript Array some
+      function exists(value, array) {
+          return array.some(e => e === value);
+      }
+      let marks = [4, 5, 7, 9, 10, 2];
+      console.log(exists(4, marks));
+      console.log(exists(11, marks));
+      // * Output
+                   // false
+//-- #2 JavaScript Array some
+       let marks = [4, 5, 7, 9, 10, 2];
+      
+      const range = {
+          min: 8,
+          max: 10
+      };
+      let result = marks.some(function (e) {
+          return e >= this.min && e <= this.max;
+      }, range);
+      console.log(result);
+      // * Output
+                   // true
