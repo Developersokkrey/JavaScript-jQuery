@@ -590,3 +590,26 @@
         console.table(employees);
       // * Output
                    // Sort by name ads
+
+#toSorted
+#Array
+//-------------------------------------- JavaScript Array toSorted method
+//-- #1 JavaScript Array toSorted method
+// Original array of books
+        const books = [
+          { title: 'The Great Gatsby', author: 'F. Scott Fitzgerald', year: 1925 },
+          { title: 'To Kill a Mockingbird', author: 'Harper Lee', year: 1960 },
+          { title: '1984', author: 'George Orwell', year: 1949 },
+          { title: 'Brave New World', author: 'Aldous Huxley', year: 1932 }
+        ];
+        // Creating a sorted copy based on the publication year using toSorted()
+        const sortedBooks = books.toSorted((a, b) => a.year - b.year);
+        // Output the sorted copy and the original array
+        console.log(sortedBooks);
+        // * Output
+            // [
+            //   { title: 'The Great Gatsby', author: 'F. Scott Fitzgerald', year: 1925},
+            //   { title: 'Brave New World', author: 'Aldous Huxley', year: 1932 },
+            //   { title: '1984', author: 'George Orwell', year: 1949 },
+            //   { title: 'To Kill a Mockingbird', author: 'Harper Lee', year: 1960 }
+            // ]
