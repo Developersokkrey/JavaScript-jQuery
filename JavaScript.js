@@ -613,3 +613,31 @@
             //   { title: '1984', author: 'George Orwell', year: 1949 },
             //   { title: 'To Kill a Mockingbird', author: 'Harper Lee', year: 1960 }
             // ]
+
+#concat
+#Array
+//-------------------------------------- JavaScript Array concat: Merge Arrays
+//-- #1 JavaScript Array concat: Merge Arrays
+        let odds = [1,3,5];
+        let evens = [2,4,6];
+        // merge odds and evens array
+        let combined = odds.concat(evens);
+        console.log('Result:', combined);
+        console.log('Odds:', odds);
+            // * Output
+                  // Result: [ 1, 3, 5, 2, 4, 6 ]
+                  // Odds: [ 1, 3, 5 ]
+//-- #2 JavaScript Array concat: Merge Arrays
+      let upper  = ['A','B','C'];
+      let lower  = ['a','b','c'];
+      let digits = [1,2,3];
+      let alphanumerics = upper.concat(lower, digits);
+      // * Output
+            // ['A', 'B', 'C', 'a',  'b', 'c', 1,   2,  3]
+//-- #3 JavaScript  you can use spread operator to merge multiple arrays
+      let odds = [1,3,5];
+      let evens = [2,4,6];
+      let combined = [...odds, ...evens];
+      console.log(combined);
+            // * Output
+            // [ 1, 3, 5, 2, 4, 6 ]
